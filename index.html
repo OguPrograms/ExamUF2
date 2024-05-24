@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="CSS/style.css"> 
+		<title>Restaurant</title>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	</head>
+	<body>
+
+		<!-- 1- IMATGES - OPTIMITZACIÓ -->
+		<section>
+			<h3>Galeria d'imatges</h3>
+			<div class="gallery">
+				<div class="image-container">
+					<img src="IMAGES/plat1.jpg" alt="Imatge plat de verdures">
+				</div>
+				<div class="image-container">
+					<img src="IMAGES/plat2.jpg" alt="Imatge plat despaguettis">
+				</div>
+				<div class="image-container">
+					<img src="IMAGES/plat3.jpg" alt="Imatge plat de salmó amb verdures">
+				</div>
+			</div>
+		</section>
+
+		<!-- 2- IMATGES - RESPONSIVES -->
+		<section>
+			<picture>
+				<source media="(max-width:500px)" srcset="IMAGES/img_responsive500.webp" alt="Imatge del restaurant per dins">
+				<source media="(max-width:640px)" srcset="IMAGES/img_responsive640.webp" alt="Imatge del restaurant per dins">
+				<img class="imagen_responsiva" src="IMAGES/img_responsive.webp" alt="Imatge del restaurant per dins">
+			</picture>
+		
+		<!-- 3- ANIMACIONS - CSS -->
+		</section>
+		<section id="animaccio">
+			<div class="css_div">capa</div>
+		</section>
+
+		<!-- 4- JS-VIDEO-ICONES -->
+		<section>
+			<video muted autoplay id="video">
+				<source src="VIDEOS/video.mp4" type="video/mp4">
+			</video>
+			<div>
+				<i class="material-icons" id="play" onclick="play()">play_arrow</i>
+				<i class="material-icons" id="pause" onclick="pause()">pause_arrow</i>
+			</div>
+		</section>
+		<script>
+			const video = document.getElementById("video");
+			const btn_play = document.getElementById("play");
+			const btn_pause = document.getElementById("pause");
+			function play(){
+				if (video.paused){
+					video.play()
+				} else{
+					window.alert("El vídeo s'està reproduint")
+				}
+			}
+			function pause(){
+				if (video.paused){
+					window.alert("El vídeo està parat")
+				} else{
+					video.pause()
+				}
+			}
+		</script>
+	</body>
+</html>
